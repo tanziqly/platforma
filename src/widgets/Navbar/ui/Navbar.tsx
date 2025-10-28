@@ -18,7 +18,7 @@ export const Navbar = () => {
   const isAuth = true;
 
   return (
-    <div className="max-w-[1400px] w-full px-5 flex justify-between items-center border-b relative">
+    <div className="max-w-[1440px] w-full mx-5 flex justify-between items-center border-b relative">
       <Link to="/">
         <img src={logo} alt="logo" />
       </Link>
@@ -41,7 +41,7 @@ export const Navbar = () => {
 
         <div className="flex gap-2 items-center pr-4 border-r">
           <Input placeholder="Начните искать..." />
-          <Button className="bg-secondary h-8 w-8 p-0 flex justify-center items-center">
+          <Button className="bg-secondary hover:bg-green-600 h-8 w-8 p-0 flex justify-center items-center">
             <Search />
           </Button>
         </div>
