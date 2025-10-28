@@ -8,7 +8,7 @@ type LayoutProps = {
 export const Layout = ({ children }: LayoutProps) => {
   return (
     <>
-      <nav>
+      <nav className="w-full fixed flex justify-center items-center h-[72px] lg:h-[92px]">
         <Navbar />
       </nav>
       <main className="min-h-screen">{children}</main>
