@@ -78,7 +78,6 @@ export const ProductList: FC<ProductListProps> = ({ title, variant }) => {
   return (
     <div className="flex justify-center w-full px-3 sm:px-5">
       <div className="max-w-[1440px] gap-3 flex flex-col w-full">
-        {/* Заголовок и стрелки */}
         <div className="flex gap-2 w-full justify-between items-center">
           <h2 className="font-semibold text-2xl">{title}</h2>
           {isCarousel && (
@@ -99,7 +98,7 @@ export const ProductList: FC<ProductListProps> = ({ title, variant }) => {
           )}
         </div>
 
-        {/* Сетка */}
+        {/* Сетка Все сервисы */}
         {isGrid && (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-3">
             {products.map((p) => (
@@ -110,7 +109,7 @@ export const ProductList: FC<ProductListProps> = ({ title, variant }) => {
 
         {/* Последние (фиксированные 5 карточек) */}
         {!isGrid && !isCarousel && (
-          <div className="flex flex-wrap justify-center gap-3 sm:justify-between">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
             {products.slice(0, 5).map((p) => (
               <Product key={p.pId} {...p} />
             ))}
