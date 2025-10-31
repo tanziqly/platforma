@@ -1,17 +1,9 @@
-import { Product } from "@entities/Product";
+import { ProductList } from "@widgets/ProductList";
 
 export const Home = () => {
   return (
     <div>
-      <div className="flex justify-center w-full">
-        <div className="max-w-[1440px] flex justify-between w-full">
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-        </div>
-      </div>
+      <ProductList variant="history" title="Последние сервисы" />
     </div>
   );
 };

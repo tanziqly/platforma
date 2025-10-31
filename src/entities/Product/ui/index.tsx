@@ -4,9 +4,16 @@ import { ArrowUpRight } from "lucide-react";
 
 import AI from "../assets/ai.svg";
 import AiProduct from "../assets/AiProduct.svg";
+
 import { Link } from "react-router-dom";
 
-export const Product = () => {
+interface ProductProps {
+  title: string;
+  description: string;
+  image?: string;
+}
+
+export const Product = ({ title, description, image }: ProductProps) => {
   return (
     <div
       className="max-w-[280px] w-full flex flex-col p-[18px] border border-[#D9D9D9] rounded-[12px]
@@ -16,20 +23,17 @@ export const Product = () => {
         <ProductIcon>
           <img src={AiProduct} />
         </ProductIcon>
-        <span className="font-semibold text-[#313131] text-xl">Нейрошлюз</span>
+        <span className="font-semibold text-[#313131] text-xl">{title}</span>
         <ProductIcon>
           <Link to="/">?</Link>
         </ProductIcon>
       </div>
       <div className="flex flex-col gap-4">
-        <span className="text-[#97989B]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit.
-        </span>
+        <span className="text-[#97989B] leading-5 h-[70px]">{description}</span>
         <hr className="border-[#DADCE4]" />
       </div>
-      <div className="w-full flex justify-center my-6">
-        <img src={AI} className="w-[120px] h-[120px]" alt="" />
+      <div className="w-full flex justify-center my-4">
+        <img src={title} className="w-[120px] h-[120px]" />
       </div>
       <Button className="bg-white hover:bg-neutral-100 cursor-pointer text-[#60A0FF]">
         Попробовать <ArrowUpRight />
