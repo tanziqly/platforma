@@ -78,7 +78,7 @@ export const ProductList: FC<ProductListProps> = ({ title, variant }) => {
   return (
     <div className="flex justify-center w-full px-3 sm:px-5">
       <div className="max-w-[1440px] gap-3 flex flex-col w-full">
-        <div className="flex gap-2 w-full justify-between items-center">
+        <div className="flex gap-2 w-fit justify-between items-center">
           <h2 className="font-semibold text-2xl">{title}</h2>
           {isCarousel && (
             <div className="flex gap-2 items-center">
@@ -100,7 +100,7 @@ export const ProductList: FC<ProductListProps> = ({ title, variant }) => {
 
         {/* Сетка Все сервисы */}
         {isGrid && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-3 justify-items-center sm:justify-items-start">
             {products.map((p) => (
               <Product key={p.pId} {...p} />
             ))}
