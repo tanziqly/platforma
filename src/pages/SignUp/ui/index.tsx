@@ -10,10 +10,10 @@ export const SignUp = () => {
       <main className="flex flex-1 items-center justify-center px-8 py-12">
         <div className="flex flex-col md:flex-row items-center justify-center max-w-6xl w-full gap-16">
           {/* left*/}
-          <div className="w-full md:w-1/2 max-w-md bg-white shadow-md rounded-2xl p-8 border border-gray-100">
+          <div className="w-full  max-w-md bg-white shadow-md rounded-2xl p-8 border border-gray-100">
             <div className="flex flex-col items-center mb-6">
               <img src={logo} alt="Логотип" 
-              className="mb-4 w-[243px] h-[97px] object-contain" />
+              className=" mb-0.2 w-[150px] h-[60px] object-contain md:w-[243px] md:h-[97px]" />
               <h2 className="text-xl font-semibold text-gray-900">
                 Регистрация
               </h2>
@@ -103,11 +103,11 @@ export const SignUp = () => {
           </div>
 
           {/* right png */}
-          <div className="w-full md:w-1/2 flex justify-center">
+          <div className="w-full flex justify-center">
             <img
               src={rightpng}
               alt="Рабочее место"
-              className="hidden md:block w-[959px] h-[719px] max-w-full object-contain"
+              className="hidden md:block w-[959px] max-w-full object-contain"
             />
           </div>
         </div>
