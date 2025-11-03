@@ -109,7 +109,7 @@ export const ProductList: FC<ProductListProps> = ({ title, variant }) => {
 
         {/* Последние (фиксированные 5 карточек) */}
         {!isGrid && !isCarousel && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 justify-items-center sm:justify-items-start">
             {products.slice(0, 5).map((p) => (
               <Product key={p.pId} {...p} />
             ))}
@@ -120,7 +120,7 @@ export const ProductList: FC<ProductListProps> = ({ title, variant }) => {
         {isCarousel && (
           <div
             ref={scrollRef}
-            className="flex gap-3 overflow-x-auto snap-x scroll-smooth no-scrollbar py-2"
+            className="flex gap-3 overflow-x-auto snap-x scroll-smooth no-scrollbar py-2 justify-center sm:justify-start"
           >
             {products.map((p) => (
               <div
