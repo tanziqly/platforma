@@ -13,6 +13,7 @@ import { Services } from "./Services";
 import { SignIn } from "./SignIn";
 import { SignUp } from "./SignUp";
 import { Chat } from "./Chat";
+import { Team } from "./Team";
 
 // Header and Footer
 import { Layout } from "@widgets/Layout";
@@ -30,6 +31,7 @@ export const Router: FC = () => {
           <Route path={ROUTE_CONSTANTS.SIGN_IN} element={<SignIn />} />
           <Route path={ROUTE_CONSTANTS.SIGN_UP} element={<SignUp />} />
           <Route path={ROUTE_CONSTANTS.CHAT} element={<Chat />} />
+          <Route path={ROUTE_CONSTANTS.TEAM} element={<Team />} />
         </Routes>
       </Layout>
     </BrowserRouter>

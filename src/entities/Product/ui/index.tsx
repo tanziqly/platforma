@@ -2,7 +2,6 @@ import { Button } from "@shared/ui/button";
 
 import { ArrowUpRight } from "lucide-react";
 
-import AI from "../assets/ai.svg";
 import AiProduct from "../assets/AiProduct.svg";
 
 import { Link } from "react-router-dom";
@@ -13,7 +12,7 @@ interface ProductProps {
   image?: string;
 }
 
-export const Product = ({ title, description, image }: ProductProps) => {
+export const Product = ({ title, description }: ProductProps) => {
   return (
     <div
       className="max-w-[280px] w-full flex flex-col p-[18px] border border-[#D9D9D9] rounded-[12px]

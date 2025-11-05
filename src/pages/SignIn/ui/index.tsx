@@ -62,11 +62,11 @@ export const SignIn = () => {
           </div>
 
           {/*right png*/}
-          <div className="w-full  flex justify-center">
+          <div className="w-full flex justify-center">
             <img
               src={rightpng}
               alt="Рабочее место"
-              className="hidden md:block w-[959px] h-[719px] max-w-full object-contain"
+              className="hidden md:block w-1259px max-w-full object-contain"
             />
           </div>
         </div>
