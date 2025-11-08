@@ -9,11 +9,12 @@ export const SignIn = () => {
         <div className="flex flex-col md:flex-row items-center justify-center max-w-6xl w-full gap-16">
           
           {/*Left*/}
-          <div className="w-full md:w-1/2 max-w-md bg-white shadow-md rounded-2xl p-8 border border-gray-100">
+          <div className="w-full  max-w-md bg-white shadow-md rounded-2xl p-8 border border-gray-100">
             <div className="flex flex-col items-center">
               <img src={logo} alt="Логотип" 
-              className="mb-4 w-[243px] h-[97px] object-contain" />
-              <h2 className="text-xl font-semibold mb-6">Вход</h2>
+              className="mb-2 w-[243px] h-[97px] object-contain" />
+               <div className="w-full border-b border-[#E5E7EB] mb-4 "></div>
+              <h2 className="text-[20px] sm:text-[24px] font-semibold mb-2">Вход</h2>
             </div>
 
             <form className="space-y-4">
@@ -24,7 +25,7 @@ export const SignIn = () => {
                 <input
                 type="email"
                 placeholder="Введите эл. адрес"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                className="w-full px-4 py-2 bg-[#F0F0F0] border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
               />
               </div>
 
@@ -35,12 +36,12 @@ export const SignIn = () => {
                 <input
                 type="password"
                 placeholder="Введите пароль"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                className="w-full px-4 py-2 bg-[#F0F0F0] border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
               />
               </div>
               
               
-              <div className="text-right text-sm">
+              <div className="text-left text-sm">
                 <a href="#" className="text-blue-600 hover:underline">
                   Забыли пароль?
                 </a>
@@ -55,18 +56,18 @@ export const SignIn = () => {
 
             <p className="text-center text-sm text-gray-600 mt-4">
               Еще нет аккаунта?{" "}
-              <Link to="/sign-up" className="text-blue-600 hover:underline">
+              <Link to="/sign-up" className="text-blue-600 underline">
                 Регистрация
               </Link>
             </p>
           </div>
 
           {/*right png*/}
-          <div className="w-full md:w-1/2 flex justify-center">
+          <div className="flex justify-center">
             <img
               src={rightpng}
               alt="Рабочее место"
-              className="hidden md:block w-[959px] h-[719px] max-w-full object-contain"
+              className="hidden md:block w-[959px]"
             />
           </div>
         </div>

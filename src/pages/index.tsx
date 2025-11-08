@@ -13,6 +13,7 @@ import { Services } from "./Services";
 import { SignIn } from "./SignIn";
 import { SignUp } from "./SignUp";
 import { Chat } from "./Chat";
+import { Team } from "./Team";
 
 // Header and Footer
 import { Layout } from "@widgets/Layout";
