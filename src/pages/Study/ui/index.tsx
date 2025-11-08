@@ -6,7 +6,7 @@ export const Study = () => {
     <div className="flex justify-center w-full">
       <div className="max-w-[1440px] mx-5 w-full">
         <h2 className="text-2xl my-5 font-semibold">Обучение</h2>
-        <div className="flex gap-10">
+        <div className="flex lg:flex-row flex-col items-center gap-10">
           <Product
             title="Нейрошлюха"
             image=""
@@ -14,7 +14,9 @@ export const Study = () => {
           />
           <div className="flex flex-col gap-6">
             <div className="border px-8 py-6 flex flex-col gap-4 rounded-[8px]">
-              <h3 className="font-semibold text-[32px]">Описание сервиса</h3>
+              <h3 className="font-semibold text-2xl sm:text-[32px]">
+                Описание сервиса
+              </h3>
               <div className="flex flex-col gap-2 text-neutral-500">
                 <span>
                   Современный мир нейросетей огромен и разрознен. Каждый день
@@ -30,7 +32,9 @@ export const Study = () => {
               </div>
             </div>
             <div className="border px-8 py-6 flex flex-col gap-4 rounded-[8px]">
-              <h3 className="font-semibold text-[32px]">Документация</h3>
+              <h3 className="font-semibold text-2xl sm:text-[32px]">
+                Документация
+              </h3>
               <div className="flex flex-col gap-2 text-neutral-500">
                 <span>
                   Ниже представлена подробная инструкция пользования сервисом.

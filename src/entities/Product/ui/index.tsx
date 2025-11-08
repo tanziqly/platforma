@@ -15,7 +15,7 @@ interface ProductProps {
 export const Product = ({ title, description }: ProductProps) => {
   return (
     <div
-      className="max-w-[280px] h-fit w-full flex flex-col p-[18px] border border-[#D9D9D9] rounded-[12px]
+      className="max-w-[280px] w-full h-fit flex flex-col p-[18px] border border-[#D9D9D9] rounded-[12px]
       bg-[radial-gradient(circle_at_center,#FFFFFF_0%,#DEE3F2_40%,#F5F5F5_100%)]"
     >
       <div className="flex items-center justify-between mb-2">
