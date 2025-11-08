@@ -42,6 +42,7 @@ const AppRoutes: FC = () => {
         <Route path={ROUTE_CONSTANTS.PRODUCTS} element={<Products />} />
         <Route path={ROUTE_CONSTANTS.SERVICES} element={<Services />} />
         <Route path={ROUTE_CONSTANTS.SIGN_IN} element={<SignIn />} />
+        <Route path={ROUTE_CONSTANTS.TEAM} element={<Team />} />
         <Route path={ROUTE_CONSTANTS.SIGN_UP} element={<SignUp />} />
       </Routes>
     </Layout>
