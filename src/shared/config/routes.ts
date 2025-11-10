@@ -7,5 +7,6 @@ export const ROUTE_CONSTANTS = {
   SIGN_IN: "/sign-in",
   SIGN_UP: "/sign-up",
   CHAT: "/chat",
-  TEAM: "/team"
+  TEAM: "/team",
+  ADMIN: "/admin"
 };
