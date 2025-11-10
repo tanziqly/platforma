@@ -8,14 +8,25 @@ import { MobileMenu } from "./MobileMenu";
 import { NavLinks } from "./NavLinks";
 import { UserDropdown } from "./UserDropdown";
 import { useClickOutside } from "@shared/hooks/useClickOutside";
+import { useAuth } from "@features/auth/hooks/useAuth";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+  const { isAuth, isAuthChecked } = useAuth();
 
   useClickOutside(menuRef, () => setMenuOpen(false));
 
-  const isAuth = true;
+  if (!isAuthChecked) {
+    return (
+      <div className="max-w-[1440px] w-full mx-5 flex justify-between items-center border-b relative py-4">
+        <Link to="/">
+          <img src={logo} alt="logo" />
+        </Link>
+        <div className="animate-pulse bg-gray-200 h-8 w-24 rounded"></div>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-[1440px] w-full mx-5 flex justify-between items-center border-b relative">
@@ -33,7 +44,7 @@ export const Navbar = () => {
         <div className="h-0.5 w-5 bg-black rounded-sm" />
       </div>
 
-      {menuOpen && <MobileMenu ref={menuRef} />}
+      {menuOpen && <MobileMenu ref={menuRef} onClose={() => setMenuOpen(false)} />}
 
       {/* Десктопная навигация */}
       <div className="hidden items-center gap-4 lg:flex">
