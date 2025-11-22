@@ -21,7 +21,7 @@ export const Services = () => {
   bg-[radial-gradient(circle_at_center,#FFFFFF_0%,#DEE3F2_40%,#FFFFFF_100%)]"
 >
   <div className="flex items-center justify-between mb-2">
-      <ProductIcon />
+     
       <span className="font-semibold text-[#313131] text-xl"></span>
       <ProductIcon>
         <Link to="/">?</Link>
