@@ -9,7 +9,7 @@ export const SignIn = () => {
         <div className="flex flex-col md:flex-row items-center justify-center max-w-6xl w-full gap-16">
           
           {/*Left*/}
-          <div className="w-full  max-w-md bg-white shadow-md rounded-2xl p-8 border border-gray-100">
+          <div className="w-full  max-w-md bg-white shadow-md rounded-2xl p-6 border border-gray-100">
             <div className="flex flex-col items-center">
               <img src={logo} alt="Логотип" 
               className="mb-2 w-[243px] h-[97px] object-contain" />
