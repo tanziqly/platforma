@@ -9,5 +9,6 @@ export const ROUTE_CONSTANTS = {
   CHAT: "/chat",
   TEAM: "/team",
   STUDY: "/study",
+  ADMIN_SERVICE: "/admin-service",
   ADMIN: "/admin",
 };

@@ -14,68 +14,49 @@ import { SignIn } from "./SignIn";
 import { SignUp } from "./SignUp";
 import { Chat } from "./Chat";
 import { Team } from "./Team";
-<<<<<<< HEAD
 import { Study } from "./Study";
-=======
-import { Admin } from "./Admin";
->>>>>>> platforma/main
+import { AdminService } from "./AdminService";
 
-// Header and Footer
+// Layout
 import { Layout } from "@widgets/Layout";
+import { Admin } from "./Admin";
 
 const AppRoutes: FC = () => {
   const location = useLocation();
 
-  // Если текущий путь — чат, не показываем Layout
+  // Проверка: если чат — убираем layout
   const isChatPage = location.pathname === ROUTE_CONSTANTS.CHAT;
 
-  if (isChatPage) {
-    return (
-      <Routes>
-        <Route path={ROUTE_CONSTANTS.CHAT} element={<Chat />} />
-      </Routes>
-    );
-  }
+  const routes = (
+    <Routes>
+      <Route path={ROUTE_CONSTANTS.HOME} element={<Home />} />
+      <Route path={ROUTE_CONSTANTS.ABOUT} element={<About />} />
+      <Route path={ROUTE_CONSTANTS.PROFILE} element={<Profile />} />
+      <Route path={ROUTE_CONSTANTS.PRODUCTS} element={<Products />} />
+      <Route path={ROUTE_CONSTANTS.SERVICES} element={<Services />} />
+      <Route path={ROUTE_CONSTANTS.SIGN_IN} element={<SignIn />} />
+      <Route path={ROUTE_CONSTANTS.SIGN_UP} element={<SignUp />} />
+      <Route path={ROUTE_CONSTANTS.TEAM} element={<Team />} />
+      <Route path={ROUTE_CONSTANTS.STUDY} element={<Study />} />
+      <Route path={ROUTE_CONSTANTS.ADMIN_SERVICE} element={<AdminService />} />
+      <Route path={ROUTE_CONSTANTS.ADMIN} element={<Admin />} />
 
-  // Все остальные страницы оборачиваются в Layout
-  return (
-    <Layout>
-      <Routes>
-        <Route path={ROUTE_CONSTANTS.HOME} element={<Home />} />
-        <Route path={ROUTE_CONSTANTS.ABOUT} element={<About />} />
-        <Route path={ROUTE_CONSTANTS.PROFILE} element={<Profile />} />
-        <Route path={ROUTE_CONSTANTS.PRODUCTS} element={<Products />} />
-        <Route path={ROUTE_CONSTANTS.SERVICES} element={<Services />} />
-        <Route path={ROUTE_CONSTANTS.SIGN_IN} element={<SignIn />} />
-        <Route path={ROUTE_CONSTANTS.TEAM} element={<Team />} />
-        <Route path={ROUTE_CONSTANTS.STUDY} element={<Study />} />
-        <Route path={ROUTE_CONSTANTS.SIGN_UP} element={<SignUp />} />
-      </Routes>
-    </Layout>
+      {/* Страница без Layout */}
+      <Route path={ROUTE_CONSTANTS.CHAT} element={<Chat />} />
+    </Routes>
   );
+
+  // Чат — без Layout
+  if (isChatPage) return routes;
+
+  // Все остальные — в Layout
+  return <Layout>{routes}</Layout>;
 };
 
 export const Router: FC = () => {
   return (
     <BrowserRouter>
-<<<<<<< HEAD
       <AppRoutes />
-=======
-      <Layout>
-        <Routes>
-          <Route path={ROUTE_CONSTANTS.HOME} element={<Home />} />
-          <Route path={ROUTE_CONSTANTS.ABOUT} element={<About />} />
-          <Route path={ROUTE_CONSTANTS.PROFILE} element={<Profile />} />
-          <Route path={ROUTE_CONSTANTS.PRODUCTS} element={<Products />} />
-          <Route path={ROUTE_CONSTANTS.SERVICES} element={<Services />} />
-          <Route path={ROUTE_CONSTANTS.SIGN_IN} element={<SignIn />} />
-          <Route path={ROUTE_CONSTANTS.SIGN_UP} element={<SignUp />} />
-          <Route path={ROUTE_CONSTANTS.CHAT} element={<Chat />} />
-           <Route path={ROUTE_CONSTANTS.TEAM} element={<Team />} />
-          <Route path={ROUTE_CONSTANTS.ADMIN} element={<Admin />} />
-        </Routes>
-      </Layout>
->>>>>>> platforma/main
     </BrowserRouter>
   );
 };
