@@ -18,6 +18,7 @@ export const Products = () => {
               Сортировать
               <ArrowDownWideNarrow />
             </Button>
+            
           </div>
         </div>
         <ProductList title="" variant="all" />

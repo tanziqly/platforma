@@ -10,7 +10,7 @@ export const SignUp = () => {
       <main className="flex flex-1 items-center justify-center px-8 py-12">
         <div className="flex flex-col md:flex-row items-center justify-center max-w-6xl w-full gap-16">
           {/* left*/}
-          <div className="w-full  max-w-md bg-white shadow-md rounded-2xl p-2 border border-gray-100">
+          <div className="w-full  max-w-md bg-white shadow-md rounded-2xl p-6 border border-gray-100">
             <div className="flex flex-col items-center mb-2">
               <img src={logo} alt="Логотип" 
               className=" mb-0.2 w-[150px] h-[60px] object-contain md:w-[243px] md:h-[97px]" />
