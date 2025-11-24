@@ -18,14 +18,11 @@ import { Study } from "./Study";
 import { AdminService } from "./AdminService";
 import { Admin } from "./Admin";
 
-
 // Layout
 import { Layout } from "@widgets/Layout";
 
 const AppRoutes: FC = () => {
   const location = useLocation();
-
-  // Проверка: если чат — убираем layout
   const isChatPage = location.pathname === ROUTE_CONSTANTS.CHAT;
 
   const routes = (
@@ -41,39 +38,19 @@ const AppRoutes: FC = () => {
       <Route path={ROUTE_CONSTANTS.STUDY} element={<Study />} />
       <Route path={ROUTE_CONSTANTS.ADMIN_SERVICE} element={<AdminService />} />
       <Route path={ROUTE_CONSTANTS.ADMIN} element={<Admin />} />
-
-      {/* Страница без Layout */}
       <Route path={ROUTE_CONSTANTS.CHAT} element={<Chat />} />
     </Routes>
-  // Все остальные страницы оборачиваются в Layout
-  return (
-    <Layout>
-      <Routes>
-        <Route path={ROUTE_CONSTANTS.HOME} element={<Home />} />
-        <Route path={ROUTE_CONSTANTS.ABOUT} element={<About />} />
-        <Route path={ROUTE_CONSTANTS.PROFILE} element={<Profile />} />
-        <Route path={ROUTE_CONSTANTS.PRODUCTS} element={<Products />} />
-        <Route path={ROUTE_CONSTANTS.SERVICES} element={<Services />} />
-        <Route path={ROUTE_CONSTANTS.SIGN_IN} element={<SignIn />} />
-        <Route path={ROUTE_CONSTANTS.TEAM} element={<Team />} />
-        <Route path={ROUTE_CONSTANTS.STUDY} element={<Study />} />
-        <Route path={ROUTE_CONSTANTS.SIGN_UP} element={<SignUp />} />
-        <Route path={ROUTE_CONSTANTS.ADMIN} element={<Admin />} />
-      </Routes>
-    </Layout>
   );
 
-  // Чат — без Layout
+  // Если чат — без Layout
   if (isChatPage) return routes;
 
-  // Все остальные — в Layout
+  // Все остальные страницы — в Layout
   return <Layout>{routes}</Layout>;
 };
 
-export const Router: FC = () => {
-  return (
-    <BrowserRouter>
-      <AppRoutes />
-    </BrowserRouter>
-  );
-};
+export const Router: FC = () => (
+  <BrowserRouter>
+    <AppRoutes />
+  </BrowserRouter>
+);
